@@ -25,13 +25,12 @@ public class MainActivity extends AppCompatActivity {
         compareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 String inputOne = firstDigit.getText().toString();
                 String inputTwo = secondDigit.getText().toString();
 
                 try {
 
-                    if (Integer.valueOf(inputOne) == Integer.valueOf(inputTwo)) {
+                    if (Integer.valueOf(inputOne).equals(Integer.valueOf(inputTwo))) {
                         result.setText("Equal");
                     } else {
                         result.setText("Not Equal");
